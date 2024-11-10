@@ -13,17 +13,5 @@
         <p>Thank you for connecting your Roblox account. You are now recognized within our community!</p>
         <p>Click <a href="https://discord.gg/yourdiscordlink" target="_blank">here</a> to join our Discord server.</p>
     </div>
-    <script>
-        // Get code and state from URL parameters
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        const state = urlParams.get('state');
-
-        // Store these in localStorage so they persist after the redirect
-        if (code && state) {
-            localStorage.setItem('roblox_auth_code', code);
-            localStorage.setItem('roblox_auth_state', state);
-        }
-    </script>
 </body>
 </html>
