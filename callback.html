@@ -1,19 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Roblox Verification Callback</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"> <!-- Assuming you are using the same CSS file -->
+    <title>Verification Success</title>
 </head>
 <body>
-    <h1>Verification Successful</h1>
-    <p>Please copy the following code and paste it in Discord:</p>
-    <pre id="verificationCode"></pre>
-
-    <script>
-        const urlParams = new URLSearchParams(window.location.search);
-        const code = urlParams.get('code');
-        const state = urlParams.get('state');
-        const verificationCode = `${code}|${state}`;
-        document.getElementById('verificationCode').textContent = verificationCode;
-    </script>
+    <div class="container">
+        <h1>Success!</h1>
+        <p>You have successfully verified your identity with Valkov Verification System.</p>
+        <p>Thank you for connecting your Roblox account. You are now recognized within our community!</p>
+        <p>Click <a href="https://discord.gg/yourdiscordlink" target="_blank">here</a> to join our Discord server.</p>
+    </div>
 </body>
 </html>
