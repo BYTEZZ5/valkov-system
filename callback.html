@@ -13,35 +13,5 @@
         <p>Thank you for connecting your Roblox account. You are now recognized within our community!</p>
         <p>Click <a href="https://discord.gg/yourdiscordlink" target="_blank">here</a> to join our Discord server.</p>
     </div>
-
-    <script>
-        // Function to send the code to your bot's webhook
-        async function sendCodeToBot() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const code = urlParams.get('code');
-            const state = urlParams.get('state');
-
-            if (code && state) {
-                try {
-                    const response = await fetch('YOUR_WEBHOOK_URL', {
-                        method: 'POST',
-                        headers: {
-                            'Content-Type': 'application/json',
-                        },
-                        body: JSON.stringify({ code, state }),
-                    });
-
-                    if (!response.ok) {
-                        throw new Error('Failed to send verification data');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                }
-            }
-        }
-
-        // Call the function when the page loads
-        sendCodeToBot();
-    </script>
 </body>
 </html>
